@@ -1,3 +1,5 @@
 <?php
 
-require "index.view.php";
+$heading = 'Home page';
+
+require "views/index.view.php";
