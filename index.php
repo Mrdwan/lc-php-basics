@@ -1,5 +1,7 @@
 <?php
 
+require "functions.php";
+
 $heading = 'Home page';
 
 require "views/index.view.php";
