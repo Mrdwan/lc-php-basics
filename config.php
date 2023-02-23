@@ -3,8 +3,10 @@
 return [
     'database' => [
         'host' => 'localhost',
-        'port' => 3305,
+        'port' => 3306,
         'dbname' => 'php-basics',
         'charset' => 'utf8mb4'
-    ]
+    ],
+
+    //
 ];

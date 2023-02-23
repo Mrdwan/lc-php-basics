@@ -5,7 +5,7 @@ class Database
     public $connection;
     public $statement;
 
-    public function __construct($config, $username = 'root', $password = null)
+    public function __construct($config, $username = 'root', $password = '')
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
@@ -14,22 +14,23 @@ class Database
         ]);
     }
 
-    function query($query, $params = [])
+    public function query($query, $params = [])
     {
         $this->statement = $this->connection->prepare($query);
+
         $this->statement->execute($params);
 
         return $this;
     }
 
-    public function find()
-    {
-        return $this->statement->fetch();
-    }
-
     public function get()
     {
         return $this->statement->fetchAll();
+    }
+
+    public function find()
+    {
+        return $this->statement->fetch();
     }
 
     public function findOrFail()
