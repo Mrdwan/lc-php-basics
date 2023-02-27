@@ -1,10 +1,10 @@
 <?php
 
+use Core\App;
 use Core\Database;
 use Core\Validator;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $errors = [];
 
@@ -24,6 +24,6 @@ $db->query('INSERT INTO notes(body, user_id) VALUES(:body, :user_id)', [
     'user_id' => 1
 ]);
 
-header("Location: /notes");
-die();
+header('Location: /notes');
+exit();
 
