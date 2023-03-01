@@ -1,4 +1,4 @@
-# Laracasts - PHP for beginners course
+# A simple framework for PHP
 
+following a course on Laracasts
 [a first course on Laracasts](https://laracasts.com/series/php-for-beginners-2023-edition)
-
